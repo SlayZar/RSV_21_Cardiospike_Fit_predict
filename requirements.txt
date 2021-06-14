@@ -2,4 +2,8 @@ streamlit == 0.79.0
 pandas == 1.1.5
 numpy == 1.19.5
 catboost == 0.26
+<<<<<<< HEAD
 hrv-analysis == 1.0.3
+=======
+hrv-analysis == 1.0.3
+>>>>>>> 039ea19178b18dc4ad5b5d42c4e596b5d1e5aba0
