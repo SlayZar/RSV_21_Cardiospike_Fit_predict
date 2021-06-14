@@ -18,7 +18,7 @@ def anomaly_detected(df):
     new_df2 = pd.DataFrame()
     for i in df.id.unique():
         new_df2_tmp = pd.concat([df[df.id==i].merge(
-            pd.DataFrame(remove_ectopic_beats(list(df[df.id==i]['x']), verbose = False), columns=['anomaly_2']),
+            pd.DataFrame(remove_ectopic_beats(list(df[df.id==i]['x']), columns=['anomaly_2']),
                     on = np.arange(len(df[df.id==i]))).drop(['key_0'], axis=1)])
         new_df2 = pd.concat([new_df2, new_df2_tmp])
     new_df['anomaly__1'] = (new_df['anomaly_1'].isnull()).astype(int)
