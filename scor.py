@@ -4,10 +4,7 @@ import numpy as np
 from catboost import CatBoostClassifier, Pool
 import base64
 import time
-from matplotlib import pyplot as plt
-from streamlit import caching
-from sklearn.metrics import f1_score
-from hrvanalysis import remove_outliers, remove_ectopic_beats, interpolate_nan_values
+from hrvanalysis import remove_outliers, remove_ectopic_beats
 
 
 # Обнаружение аномалий, накопительное среднее
@@ -217,7 +214,7 @@ def slider_feats(train, feat, target_col_name):
         pass
 
 if st.sidebar.button('Очистить кэш'):
-    caching.clear_cache()
+    st.caching.clear_cache()
 
 new_cols2 = ['std_rolling_10_c', 'std_rolling_5_c', 'std_rolling_5', 'std_rolling_100_c',
  'std_value', 'time', 'cummean_diff', 'median_rolling_1_250_rel2',
