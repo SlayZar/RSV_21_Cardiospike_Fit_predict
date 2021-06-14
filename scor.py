@@ -227,7 +227,7 @@ new_cols2 = ['std_rolling_10_c', 'std_rolling_5_c', 'std_rolling_5', 'std_rollin
  'std_rolling_1_2_rel4', 'max_value', 'std_rolling_1_5_rel1',
  'std_rolling_1_10000_rel1', 'min_rolling_1_10000', 'median_rolling_1_10000_rel4']
 tresh = 0.265
-data_path = '../data/test.csv'
+data_path = 'data/test.csv'
 target_col_name = 'pred2_bin'
 
 options = st.selectbox('Какие данные скорить?',
