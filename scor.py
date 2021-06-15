@@ -234,7 +234,7 @@ options = st.selectbox('Какие данные скорить?',
          ['Тестовый датасет', 'Загрузить новые данные'], index=1)
 
 if options == 'Тестовый датасет':
-    df = pd.read_csv(data_path)
+    df = pd.read_csv('data/test.csv')
     df.sort_values(by=['id', 'time'], inplace=True)
     res = scoring(df, '1406_best_model', new_cols2, tresh)
     st.markdown('### Скоринг завершён успешно!')
