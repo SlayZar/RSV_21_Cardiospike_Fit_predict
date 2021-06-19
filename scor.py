@@ -117,8 +117,8 @@ def slider_feats(train, feat, target_col_name):
     except:
         pass
 
-st.set_page_config("fffffffffffff")
-st.image("https://clip2net.com/clip/m392735/dee36-clip-151kb.jpg?nocache=1")
+st.set_page_config("Fit_Prdeict Cardiospike demo")
+st.image("https://clip2net.com/clip/m392735/dee36-clip-151kb.jpg?nocache=1", width=7)
 
 if st.sidebar.button('Очистить кэш'):
     st.caching.clear_cache()
