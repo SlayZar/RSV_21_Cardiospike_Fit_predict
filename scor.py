@@ -265,37 +265,37 @@ def feature_generate(df_train):
     return df_train
 
 def new_feats(df_train):
-  get_sampen_df_res = pd.DataFrame()
+#   get_sampen_df_res = pd.DataFrame()
   get_time_domain_features_res = pd.DataFrame()
   get_geometrical_features_res = pd.DataFrame()
-  get_frequency_domain_features_res = pd.DataFrame()
-  get_csi_cvi_features_res = pd.DataFrame()
-  get_poincare_plot_features_res = pd.DataFrame()
+#   get_frequency_domain_features_res = pd.DataFrame()
+#   get_csi_cvi_features_res = pd.DataFrame()
+#   get_poincare_plot_features_res = pd.DataFrame()
   for i in df_train.id.unique():
-    get_sampen_df =  pd.DataFrame(get_sampen(df_train[df_train.id==i]['x']), index=[i])
-    get_sampen_df['id'] = i 
-    get_sampen_df_res = pd.concat([get_sampen_df, get_sampen_df_res])
+#     get_sampen_df =  pd.DataFrame(get_sampen(df_train[df_train.id==i]['x']), index=[i])
+#     get_sampen_df['id'] = i 
+#     get_sampen_df_res = pd.concat([get_sampen_df, get_sampen_df_res])
     get_time_domain_features_df =  pd.DataFrame(get_time_domain_features(df_train[df_train.id==i]['x']), index=[i])
     get_time_domain_features_df['id'] = i 
     get_time_domain_features_res = pd.concat([get_time_domain_features_df, get_time_domain_features_res])
     get_geometrical_features_df =  pd.DataFrame(get_geometrical_features(df_train[df_train.id==i]['x']), index=[i])
     get_geometrical_features_df['id'] = i 
     get_geometrical_features_res = pd.concat([get_geometrical_features_df, get_geometrical_features_res])
-    get_frequency_domain_features_df =  pd.DataFrame(get_frequency_domain_features(df_train[df_train.id==i]['x']), index=[i])
-    get_frequency_domain_features_df['id'] = i 
-    get_frequency_domain_features_res = pd.concat([get_frequency_domain_features_df, get_frequency_domain_features_res])
-    get_csi_cvi_features_df =  pd.DataFrame(get_csi_cvi_features(df_train[df_train.id==i]['x']), index=[i])
-    get_csi_cvi_features_df['id'] = i 
-    get_csi_cvi_features_res = pd.concat([get_csi_cvi_features_df, get_csi_cvi_features_res])
-    get_poincare_plot_features_df =  pd.DataFrame(get_poincare_plot_features(df_train[df_train.id==i]['x']), index=[i])
-    get_poincare_plot_features_df['id'] = i 
-    get_poincare_plot_features_res = pd.concat([get_poincare_plot_features_df, get_poincare_plot_features_res])
-  df_train = df_train.merge(get_sampen_df_res, on=['id'])
+#     get_frequency_domain_features_df =  pd.DataFrame(get_frequency_domain_features(df_train[df_train.id==i]['x']), index=[i])
+#     get_frequency_domain_features_df['id'] = i 
+#     get_frequency_domain_features_res = pd.concat([get_frequency_domain_features_df, get_frequency_domain_features_res])
+#     get_csi_cvi_features_df =  pd.DataFrame(get_csi_cvi_features(df_train[df_train.id==i]['x']), index=[i])
+#     get_csi_cvi_features_df['id'] = i 
+#     get_csi_cvi_features_res = pd.concat([get_csi_cvi_features_df, get_csi_cvi_features_res])
+#     get_poincare_plot_features_df =  pd.DataFrame(get_poincare_plot_features(df_train[df_train.id==i]['x']), index=[i])
+#     get_poincare_plot_features_df['id'] = i 
+#     get_poincare_plot_features_res = pd.concat([get_poincare_plot_features_df, get_poincare_plot_features_res])
+#   df_train = df_train.merge(get_sampen_df_res, on=['id'])
   df_train = df_train.merge(get_time_domain_features_res, on=['id'])
   df_train = df_train.merge(get_geometrical_features_res, on=['id'])
-  df_train = df_train.merge(get_frequency_domain_features_res, on=['id'])
-  df_train = df_train.merge(get_csi_cvi_features_res, on=['id'])
-  df_train = df_train.merge(get_poincare_plot_features_res, on=['id'])
+#   df_train = df_train.merge(get_frequency_domain_features_res, on=['id'])
+#   df_train = df_train.merge(get_csi_cvi_features_res, on=['id'])
+#   df_train = df_train.merge(get_poincare_plot_features_res, on=['id'])
   return df_train
 
 @st.cache(suppress_st_warning=True)
