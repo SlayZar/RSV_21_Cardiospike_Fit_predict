@@ -118,7 +118,7 @@ def slider_feats(train, feat, target_col_name):
         pass
 
 st.set_page_config("Fit_Prdeict Cardiospike demo")
-st.image("https://clip2net.com/clip/m392735/dee36-clip-151kb.jpg?nocache=1", width=7)
+st.image("https://clip2net.com/clip/m392735/dee36-clip-151kb.jpg?nocache=1", width=70)
 
 if st.sidebar.button('Очистить кэш'):
     st.caching.clear_cache()
