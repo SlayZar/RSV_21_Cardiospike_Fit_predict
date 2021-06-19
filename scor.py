@@ -5,7 +5,6 @@ import pandas as pd
 import numpy as np
 from hrvanalysis import remove_outliers, remove_ectopic_beats, interpolate_nan_values, get_time_domain_features
 from catboost import CatBoostClassifier, Pool, CatBoost
-import shap
 
 # Детекция аномалий
 def anomaly_detected(df):
