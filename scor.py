@@ -3,7 +3,6 @@ import base64
 from hrvanalysis import remove_outliers, remove_ectopic_beats
 import pandas as pd
 import numpy as np
-import optuna
 from hrvanalysis import remove_outliers, remove_ectopic_beats, interpolate_nan_values, get_time_domain_features
 from catboost import CatBoostClassifier, Pool, CatBoost
 import shap
