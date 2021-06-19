@@ -153,7 +153,7 @@ else:
         st.markdown('### Скоринг завершён успешно!')
 
         st.markdown(get_table_download_link(res), unsafe_allow_html=True)
-		st.markdown('\hspace{3cm} $\hspace{5cm}$')
+		st.markdown('\hspace{3cm}')
         st.write('Доля класса 1 = ', round(100*res[target_col_name].mean(), 1), ' %')
         
         slider_feats(res, 'id', target_col_name)
