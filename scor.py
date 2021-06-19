@@ -1,7 +1,6 @@
 import streamlit as st
 import base64
 from hrvanalysis import remove_outliers, remove_ectopic_beats
-from sklearn.metrics import f1_score
 import pandas as pd
 import numpy as np
 import optuna

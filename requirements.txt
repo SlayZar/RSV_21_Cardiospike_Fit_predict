@@ -3,4 +3,3 @@ pandas == 1.1.5
 numpy == 1.19.5
 catboost == 0.26
 hrv-analysis == 1.0.3
-sklearn == 0.22.2
