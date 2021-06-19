@@ -129,7 +129,7 @@ tresh = 0.4824120603015075
 data_path = 'data/test.csv'
 target_col_name = 'prediction'
 
-st.markdown('##Детектор ковидных аномалий на ритмограмме')
+st.markdown('## Детектор ковидных аномалий на ритмограмме')
 
 options = st.selectbox('Какие данные скорить?',
          ['Тестовый датасет', 'Загрузить новые данные'], index=1)
