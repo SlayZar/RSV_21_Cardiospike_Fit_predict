@@ -108,7 +108,7 @@ def slider_feats(train, feat, target_col_name):
         values = sorted(train[feat].unique())
     
     st.write('Результат работы модели для различных ID')
-    ids = st.selectbox(f'Выберите {feat}', values)
+    ids = st.selectbox(f'Выберите {feat} (сортировка в порядке уменьшения числа выявленных аномалий)', values)
     df_samp = train[train['id']==ids].copy()
     df_samp.set_index('time', inplace=True)
     df_samp['Аномалия ритма сердца'] = df_samp['x'] * df_samp[target_col_name].replace(0, np.nan)
