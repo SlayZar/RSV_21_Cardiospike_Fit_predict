@@ -312,6 +312,7 @@ def scoring(test_df, path_to_model, new_cols2, tresh, target_col='pred2_bin'):
     cb = CatBoostClassifier()
     cb.load_model(path_to_model)
     test_df['pred2'] = cb.predict_proba(Pool(test_df[new_cols2]))[:,1]
+    st.write('Sc')
     test_df[target_col] = (test_df['pred2'] > tresh).astype(int)
     df_test = df_test.merge(test_df[['id', 'time', 'x', 'pred2', target_col]], 
                           on =['id', 'time', 'x'], how='left')
