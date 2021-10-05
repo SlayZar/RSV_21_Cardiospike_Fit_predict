@@ -171,5 +171,5 @@ if st.sidebar.button('Анализ важности переменных мод�
     
 if st.sidebar.button('Анализ качества модели'):
     st.markdown('#### Точность модели на train-val-test выборках:')  
-    st.image("https://i.ibb.co/tQVNk7B/cb.png")
+    st.image("https://i.ibb.co/tQVNk7B/cb.png", width=200)
     st.image("https://i.ibb.co/nPddvNS/metr.png")
