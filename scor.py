@@ -167,8 +167,8 @@ else:
         
 if st.sidebar.button('Анализ важности переменных модели'):
     st.markdown('#### SHAP важности признаков модели')  
-    st.image("<a href="https://i.ibb.co/gyxF9w6/imps.jpg")
+    st.image("https://i.ibb.co/gyxF9w6/imps.jpg")
     
 if st.sidebar.button('Анализ качества модели'):
     st.markdown('#### Точность модели на train-val-test выборках:')  
-    st.image("<a href="https://i.ibb.co/WvdmbLD/f1.jpg")
+    st.image("https://i.ibb.co/WvdmbLD/f1.jpg")
