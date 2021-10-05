@@ -167,9 +167,8 @@ else:
         
 if st.sidebar.button('Анализ важности переменных модели'):
     st.markdown('#### SHAP важности признаков модели')  
-    st.image("https://clip2net.com/clip/m392735/11832-clip-461kb.jpg?nocache=1")
+    st.image("<a href="https://i.ibb.co/gyxF9w6/imps.jpg")
     
 if st.sidebar.button('Анализ качества модели'):
     st.markdown('#### Точность модели на train-val-test выборках:')  
-    st.image("https://clip2net.com/clip/m392735/067c5-clip-125kb.png?nocache=1")
-    st.image("https://clip2net.com/clip/m392735/c50c0-clip-60kb.png?nocache=1")
+    st.image("<a href="https://i.ibb.co/WvdmbLD/f1.jpg")
